@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package proto;
+
+service BoardService{
+  rpc GetBoardById(GetBoardByIdReq) returns (GetBoardByIdRes);
+  rpc GetBoards(GetBoardsReq) returns (stream GetBoardsRes);
+  rpc CreateBoard(CreateBoardReq) returns (CreateBoardRes);
+  rpc DeleteBoard(DeleteBoardReq) returns (DeleteBoardRes);
+}
+
+message GetBoardByIdReq{
+  string id = 1;
+}
+
+message GetBoardByIdRes{
+  Board board = 1;
+}
+
+message GetBoardsReq{
+  int64 skip = 1;
+  int64 limit = 2;
+}
+
+message GetBoardsRes{
+  Board board = 1;
+}
+
+message CreateBoardReq{
+  Board board = 1;
+}
+
+message CreateBoardRes{
+  string id = 1;
+}
+
+message DeleteBoardReq{
+  string id = 1;
+}
+
+message DeleteBoardRes{
+  int64 count = 1;
+}
+
+message Board{
+  string id = 1;
+  string title = 2;
+  string description = 3;
+  string image_url = 4;
+  bool is_adult = 5;
+}

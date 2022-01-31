@@ -1,0 +1,80 @@
+syntax = "proto3";
+
+package proto;
+
+import "google/protobuf/empty.proto";
+
+service ThreadService{
+  rpc GetThreads(GetThreadsReq) returns (stream GetThreadsRes);
+  rpc GetHotThreads(GetHotThreadsReq) returns (stream GetHotThreadsRes);
+  rpc GetLatestThreads(GetLatestThreadsReq) returns (stream GetLatestThreadsRes);
+  rpc GetThreadById(GetThreadByIdReq) returns (GetThreadByIdRes);
+  rpc CreateThread(CreateThreadReq) returns (CreateThreadRes);
+  rpc UpdateThread(UpdateThreadReq) returns (UpdateThreadRes);
+  rpc DeleteThread(DeleteThreadReq) returns (DeleteThreadRes);
+}
+
+message GetThreadsReq{
+  string board_id = 1;
+  int64 skip = 2;
+  int64 limit = 3;
+}
+
+message GetThreadsRes{
+  Thread thread = 1;
+}
+
+message GetHotThreadsReq{
+}
+
+message GetHotThreadsRes{
+  Thread thread = 1;
+}
+
+message GetLatestThreadsReq{
+}
+
+message GetLatestThreadsRes{
+  Thread thread = 1;
+}
+
+message GetThreadByIdReq{
+  string id = 1;
+}
+
+message GetThreadByIdRes{
+  Thread thread = 1;
+}
+
+message CreateThreadReq{
+  Thread thread = 1;
+}
+
+message CreateThreadRes{
+  string id = 1;
+}
+
+message UpdateThreadReq{
+  Thread thread = 1;
+}
+
+message UpdateThreadRes{
+  Thread thread = 1;
+}
+
+message DeleteThreadReq{
+  string id = 1;
+}
+
+message DeleteThreadRes{
+  int64 count = 1;
+}
+
+message Thread{
+  string id = 1;
+  string board_id = 2;
+  int64 post_count = 3;
+  string title = 4;
+  uint64 created_at = 5;
+  uint64 bumped_at = 6;
+}
