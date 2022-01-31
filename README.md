@@ -53,4 +53,4 @@
 
 **Also you can say that it's not "screaming architecture", but it's not true, because it' different for each layer. For example: presentation layer has "auth" and "profile" features, but the "data" layer has only "user". At the same time, "user" usecases can be used separately  in both features.**
 
-**What's the advantage of this approach? Modularity. You can easily replace each layer or make a multidex app.**
+**What's the advantage of this approach? Modularity. You can easily replace each layer or make a multidex app. Of course, it's more about large applications, but feature-like approach in usual sense (with "flattened" layers) is good to use in small apps or MVPs.**
