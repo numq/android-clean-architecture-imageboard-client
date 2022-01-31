@@ -8,18 +8,37 @@
 ## Project description:
   **Simple anonymous imageboard which allows to create threads, posts and reply to users by quoting their posts.**
   
- ## Techs:
-- **Kotlin**
+## Techs:
+*Platform:*
 - **Android**
+- **Architecture Components (ViewModel, Lifecycle)**
 - **Jetpack Compose**
-- **Accompanist**
-- **Arrow-KT**
+- **Navigation Component**
+- **Accompanist Permissions**
+- **Coil**
+
+*Common:*
+- **Kotlin**
 - **Coroutines/Flow**
+- **Arrow-KT**
 - **Hilt**
-- **AAC(ViewModel,Lifecycle)**
-- **gRPC**
+
+*Data:*
 - **Protobuf**
+- **gRPC**
 - **Room**
+
+## Structure:
+- `Data`\
+*Local and remote data sources.*
+- `Domain`\
+*Abstract entities & repositories.*
+- `Platform`\
+*Platform dependent components: DI, extension functions, navigation, handlers, etc.*
+- `Presentation`\
+*UI screens.*
+- `UseCase`\
+*Most likely: use case for each repository method.*
 
 ### Thoughts:
 *Soon*
