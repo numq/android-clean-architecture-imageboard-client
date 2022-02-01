@@ -10,14 +10,6 @@
   
 ## Tech:
 
-*Platform/Presentation:*
-- **Android**
-- **Architecture Components**
-- **Jetpack Compose**
-- **Navigation Component**
-- **Accompanist Permissions**
-- **Coil**
-
 *Common:*
 - **Kotlin**
 - **Coroutines/Flow**
@@ -28,6 +20,14 @@
 - **Protobuf**
 - **gRPC**
 - **Room**
+
+*Platform/Presentation:*
+- **Android**
+- **Architecture Components**
+- **Jetpack Compose**
+- **Navigation Component**
+- **Accompanist Permissions**
+- **Coil**
 
 ## Structure:
 - `Data`\
