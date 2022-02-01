@@ -13,7 +13,6 @@ object AppConstants {
     }
 
     object Network {
-//        const val GRPC_ADDRESS = "127.0.0.1 || 0.0.0.0 || 192.168.41.2 || 10.0.3.2 || 10.0.2.2"
         const val GRPC_ADDRESS = "10.0.3.2"
         const val GRPC_PORT = 8080
     }
